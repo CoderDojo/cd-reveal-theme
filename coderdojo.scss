@@ -1,0 +1,52 @@
+/**
+ * CoderDojo Foundation theme for reveal.js.
+ */
+
+
+// Default mixins and settings -----------------
+@import "node_modules/reveal.js/css/theme/template/mixins";
+@import "node_modules/reveal.js/css/theme/template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import 'https://fonts.googleapis.com/css?family=Lato';
+@import 'font/league-gothic/league-gothic.css';
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+// Background generator
+@mixin bodyBackground() {
+    background: url(images/coderdojo-roundel-light-bg.svg) center/contain no-repeat, url(images/coderdojo-foundation.svg) bottom 16px left 16px/128px no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0) 20px, white 20px, white 100%), linear-gradient(to right, #49b749 0%, #49b749 25%, #73449B 25%, #73449B 50%, #0093D5 50%, #0093D5 75%, #FAA31A 75%, #FAA31A 100%);
+}
+
+$mainColor: #000;
+$headingColor: #000;
+
+$mainFontSize: 38px;
+$mainFont: 'Lato', Helvetica, sans-serif;
+$headingFont: 'League Gothic', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #0093D5;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-dark-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+}
+
+
+// Theme template ------------------------------
+@import "node_modules/reveal.js/css/theme/template/theme";
+// ---------------------------------------------
